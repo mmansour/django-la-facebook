@@ -26,7 +26,7 @@ def facebook_login(request, redirect_field_name="next",
     return HttpResponseRedirect(access.authorization_url(token, display=display))
 
 
-def facebook_callback(request, error_template_name="la_facebook/fb_error.html"):
+def facebook_callback(request, error_template_name="la_facebook/fb_error.html", display="page"):
     """
         1. define RequestContext
         2. access OAuth
